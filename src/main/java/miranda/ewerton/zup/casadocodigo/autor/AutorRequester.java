@@ -1,5 +1,7 @@
 package miranda.ewerton.zup.casadocodigo.autor;
 
+import miranda.ewerton.zup.casadocodigo.compatilhado.validacao.ValorUnico;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -8,7 +10,7 @@ import javax.validation.constraints.Size;
 
 public class AutorRequester {
 
-    @Email @NotBlank private String email ;
+    @Email @NotBlank @ValorUnico(domainClass = Autor.class ,nomeDoCampo = "email") private String email ;
     @NotBlank private String nome ;
     @Size(max=400,min=0)private String descricao ;
 
