@@ -1,16 +1,14 @@
 package miranda.ewerton.zup.casadocodigo.autor;
 
-import miranda.ewerton.zup.casadocodigo.compatilhado.validacao.ValorUnico;
-
 import javax.validation.constraints.Email;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import miranda.ewerton.zup.casadocodigo.compatilhado.validacao.ValorUnico;
+
 public class AutorRequester {
 
-    @Email @NotBlank @ValorUnico(domainClass = Autor.class ,nomeDoCampo = "email") private String email ;
+    @NotBlank @Email @ValorUnico(domainClass = Autor.class ,nomeDoCampo = "email") private String email ;
     @NotBlank private String nome ;
     @Size(max=400,min=0)private String descricao ;
 
@@ -24,22 +22,16 @@ public class AutorRequester {
 
     @Override
     public String toString() {
-        return "AutorRequest{" +
+        return "Autor{" +
                 "email='" + email + '\'' +
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 '}';
     }
-    public String getEmail() {
-        return email;
-    }
-    public String getNome() {
-        return nome;
-    }
-    public String getDescricao() {
-        return descricao;
-    }
-    public Autor toModel() {
-       return new Autor(this.nome , this.email ,this.descricao);
-    }
+    
+    public String getEmail() { return email;   }
+    public String getNome() { return nome;   }
+    public String getDescricao() {return descricao;  }
+    public Autor toModel() {return new Autor(this.nome , this.email ,this.descricao);    }
+    
 }

@@ -20,7 +20,4 @@ public class CategoriaController {
 	public ResponseEntity<String> cadastrarNovaCategoria(@RequestBody @Valid CategoriaRequester requester){
 	 return ResponseEntity.ok().body(repositorio.save(requester.toModel()).toString());	
 	}
-	
-	
-
 }

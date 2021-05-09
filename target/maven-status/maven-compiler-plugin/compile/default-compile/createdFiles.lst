@@ -1,0 +1,13 @@
+miranda\ewerton\zup\casadocodigo\compatilhado\validacao\ValidadorValorUnico.class
+miranda\ewerton\zup\casadocodigo\compatilhado\ErrorGeneralHandler.class
+miranda\ewerton\zup\casadocodigo\categoria\CategoriaController.class
+miranda\ewerton\zup\casadocodigo\categoria\CategoriaRequester.class
+miranda\ewerton\zup\casadocodigo\autor\Autor.class
+miranda\ewerton\zup\casadocodigo\categoria\Categoria.class
+miranda\ewerton\zup\casadocodigo\autor\AutorController.class
+miranda\ewerton\zup\casadocodigo\CasaDoCodigoApplication.class
+miranda\ewerton\zup\casadocodigo\autor\AutorRequester.class
+miranda\ewerton\zup\casadocodigo\categoria\CategoriaRepositorio.class
+miranda\ewerton\zup\casadocodigo\compatilhado\validacao\ValorUnico.class
+miranda\ewerton\zup\casadocodigo\compatilhado\ErrorResponse.class
+miranda\ewerton\zup\casadocodigo\autor\AutorRepositorio.class
