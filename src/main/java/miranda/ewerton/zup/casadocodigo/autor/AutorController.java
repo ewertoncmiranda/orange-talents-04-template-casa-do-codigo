@@ -14,7 +14,7 @@ public class AutorController {
     AutorRepositorio repository;
 
     @PostMapping
-    public ResponseEntity<String> salvarNovoAutor(@RequestBody @Valid AutorRequester autor ){
+    public ResponseEntity<String> salvarNovoAutor(@RequestBody @Valid NovoAutorRequester autor ){
        return ResponseEntity.ok().body(repository.save(autor.toModel()).toString()) ;
     }
 }

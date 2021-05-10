@@ -6,14 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="casa-do-codigo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="casa-do-codigo" target="11" />
       <module name="casaDoCodigo" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="casa-do-codigo" options="-parameters" />
       <module name="casaDoCodigo" options="-parameters" />
     </option>
   </component>

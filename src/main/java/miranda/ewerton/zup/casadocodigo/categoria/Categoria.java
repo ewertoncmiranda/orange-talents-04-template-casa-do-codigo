@@ -17,6 +17,8 @@ public class Categoria {
 		return this.nome;
 	}
 
+	public Categoria() {	}
+	
 	public Categoria(String nome) {
 		this.nome = nome;
 	}
