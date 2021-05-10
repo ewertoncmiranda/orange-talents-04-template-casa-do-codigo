@@ -69,6 +69,46 @@ public class Livro {
 				+ autor + ", categoria=" + categoria + "]";
 	}
 
-	
+	public Long getId() {
+		return id;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public String getResumo() {
+		return resumo;
+	}
+
+	public String getSumario() {
+		return sumario;
+	}
+
+	public BigDecimal getPreco() {
+		return preco;
+	}
+
+	public int getPaginas() {
+		return paginas;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public LocalDate getDataPublicacao() {
+		return dataPublicacao;
+	}
+
+	public Autor getAutor() {
+		return autor;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+ 
 
 }
