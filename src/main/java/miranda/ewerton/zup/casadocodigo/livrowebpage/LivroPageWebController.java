@@ -1,4 +1,4 @@
-package miranda.ewerton.zup.casadocodigo.livro;
+package miranda.ewerton.zup.casadocodigo.livrowebpage;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import miranda.ewerton.zup.casadocodigo.livro.dto.LivroWebPageResponse;
+import miranda.ewerton.zup.casadocodigo.livro.Livro;
 
 @RequestMapping("/produto")
 @RestController
