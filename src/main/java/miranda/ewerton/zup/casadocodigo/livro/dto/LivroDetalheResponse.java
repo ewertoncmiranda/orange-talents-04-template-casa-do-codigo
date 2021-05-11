@@ -1,4 +1,6 @@
-package miranda.ewerton.zup.casadocodigo.livro;
+package miranda.ewerton.zup.casadocodigo.livro.dto;
+
+import miranda.ewerton.zup.casadocodigo.livro.Livro;
 
 public class LivroDetalheResponse {
 
@@ -8,11 +10,6 @@ public class LivroDetalheResponse {
 
 	public LivroDetalheResponse() {
 	};
-
-	public LivroDetalheResponse(String titulo, Long id) {
-		this.id = id;
-		this.titulo = titulo;
-	}
 
 	public LivroDetalheResponse(Livro livro) {
 		this.id = livro.getId();

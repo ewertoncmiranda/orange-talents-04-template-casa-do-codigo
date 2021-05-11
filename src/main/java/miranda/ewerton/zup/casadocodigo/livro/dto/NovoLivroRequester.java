@@ -1,4 +1,4 @@
-package miranda.ewerton.zup.casadocodigo.livro;
+package miranda.ewerton.zup.casadocodigo.livro.dto;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -19,6 +19,7 @@ import miranda.ewerton.zup.casadocodigo.autor.Autor;
 import miranda.ewerton.zup.casadocodigo.categoria.Categoria;
 import miranda.ewerton.zup.casadocodigo.compatilhado.validacao.existid.ExistsId;
 import miranda.ewerton.zup.casadocodigo.compatilhado.validacao.valorunico.ValorUnico;
+import miranda.ewerton.zup.casadocodigo.livro.Livro;
 
 public class NovoLivroRequester {
 	
