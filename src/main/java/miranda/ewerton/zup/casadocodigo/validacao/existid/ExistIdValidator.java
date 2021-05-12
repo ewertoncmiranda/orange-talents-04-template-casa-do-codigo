@@ -1,4 +1,4 @@
-package miranda.ewerton.zup.casadocodigo.compatilhado.validacao.existid;
+package miranda.ewerton.zup.casadocodigo.validacao.existid;
 
 import java.util.List;
 

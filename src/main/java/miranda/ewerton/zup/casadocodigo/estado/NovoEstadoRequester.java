@@ -3,19 +3,18 @@ package miranda.ewerton.zup.casadocodigo.estado;
 import javax.persistence.EntityManager;
 import javax.validation.constraints.NotNull;
 
-import miranda.ewerton.zup.casadocodigo.compatilhado.validacao.existid.ExistsId;
-import miranda.ewerton.zup.casadocodigo.compatilhado.validacao.valorunico.ValorUnico;
 import miranda.ewerton.zup.casadocodigo.pais.Pais;
+import miranda.ewerton.zup.casadocodigo.validacao.estadounicoporpais.EstadoUnicoPorPais;
+import miranda.ewerton.zup.casadocodigo.validacao.existid.ExistsId;
 
-
+@EstadoUnicoPorPais(classeDeDominio = Estado.class ,campoNome = "nome",campoIdPais = "idPais" , message = "Não é possivel cadastrar mais de um estado com mesmo nome por Pais.")
 public class NovoEstadoRequester {
 
 	@NotNull
-	@ValorUnico(classeDeDominio = Estado.class, nomeDoCampo = "nome")
 	private String nome;
 
 	@NotNull
-	@ExistsId(classeDeDominio = Pais.class, nomeDoCampo = "id", message = "Id de pais não encontrado!")
+	@ExistsId(classeDeDominio = Estado.class, nomeDoCampo = "id", message = "Id de pais não encontrado!")
 	private Long idPais;
 
 	public NovoEstadoRequester(String nome, Long id) {
@@ -23,8 +22,7 @@ public class NovoEstadoRequester {
 		this.idPais = id;
 	}
 
-	public NovoEstadoRequester() {
-	}
+	public NovoEstadoRequester() {}
 
 	@Override
 	public String toString() {

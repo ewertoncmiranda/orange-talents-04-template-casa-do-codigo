@@ -1,4 +1,4 @@
-package miranda.ewerton.zup.casadocodigo.compatilhado.validacao.existid;
+package miranda.ewerton.zup.casadocodigo.validacao.estadoPertencePais;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -10,15 +10,14 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 
 @Documented
-@Target(ElementType.FIELD)
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = {ExistIdValidator.class})
-public @interface ExistsId {
-	String message() default "Id não existe na base de dados" ;
-	Class<?> []groups() default {};
+@Constraint(validatedBy = {ValidadorEstadoPertencePais.class})
+public @interface EstadoPertencePais {
+	String message() default "Estado não pertence ao Pais." ;
+    Class<?> []groups() default {};
     Class<? extends Payload>[] payload() default {};
-    String nomeDoCampo ();
+    String campoIdPais ();
+    String campoIdEstado ();
     Class<?> classeDeDominio() ;
-	
-
 }

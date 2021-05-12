@@ -17,9 +17,9 @@ import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 
 import miranda.ewerton.zup.casadocodigo.autor.Autor;
 import miranda.ewerton.zup.casadocodigo.categoria.Categoria;
-import miranda.ewerton.zup.casadocodigo.compatilhado.validacao.existid.ExistsId;
 import miranda.ewerton.zup.casadocodigo.compatilhado.validacao.valorunico.ValorUnico;
 import miranda.ewerton.zup.casadocodigo.livro.Livro;
+import miranda.ewerton.zup.casadocodigo.validacao.existid.ExistsId;
 
 public class NovoLivroRequester {
 	
