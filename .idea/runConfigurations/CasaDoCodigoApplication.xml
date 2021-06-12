@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CasaDoCodigoApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="miranda.ewerton.zup.casadocodigo.CasaDoCodigoApplication" />
+    <module name="casa-do-codigo" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="miranda.ewerton.zup.casadocodigo.autor.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

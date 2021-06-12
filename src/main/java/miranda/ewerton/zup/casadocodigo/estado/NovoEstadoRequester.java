@@ -14,7 +14,7 @@ public class NovoEstadoRequester {
 	private String nome;
 
 	@NotNull
-	@ExistsId(classeDeDominio = Estado.class, nomeDoCampo = "id", message = "Id de pais não encontrado!")
+	@ExistsId(classeDeDominio = Pais.class, nomeDoCampo = "id", message = "Id de pais não encontrado!")
 	private Long idPais;
 
 	public NovoEstadoRequester(String nome, Long id) {

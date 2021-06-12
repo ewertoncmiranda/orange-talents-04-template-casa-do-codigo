@@ -17,6 +17,8 @@ public class MeuHealthChecker implements HealthIndicator {
 		detailhes.put("versao", "1.2.3");
 		detailhes.put("descricao", "Custom HealthChecker - Casa do Codigo ");
 		detailhes.put("endereço", "127.0.0.1");
+		
+
 
 		return Health.status(Status.UNKNOWN).withDetails(detailhes).build();
 	}

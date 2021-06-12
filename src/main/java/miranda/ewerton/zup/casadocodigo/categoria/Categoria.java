@@ -17,6 +17,7 @@ public class Categoria {
 		return this.nome;
 	}
 
+	@Deprecated
 	public Categoria() {	}
 	
 	public Categoria(String nome) {

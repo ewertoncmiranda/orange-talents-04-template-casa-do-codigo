@@ -12,10 +12,11 @@ import org.hibernate.validator.constraints.br.CPF;
 import miranda.ewerton.zup.casadocodigo.compatilhado.validacao.valorunico.ValorUnico;
 import miranda.ewerton.zup.casadocodigo.estado.Estado;
 import miranda.ewerton.zup.casadocodigo.pais.Pais;
+import miranda.ewerton.zup.casadocodigo.validacao.cnpjcpf.ValidaCpfOuCnpj;
 import miranda.ewerton.zup.casadocodigo.validacao.estadoPertencePais.EstadoPertencePais;
 import miranda.ewerton.zup.casadocodigo.validacao.existid.ExistsId;
 
-@EstadoPertencePais(campoIdEstado = "idEstado" ,campoIdPais = "idPais" ,classeDeDominio = Estado.class)
+@EstadoPertencePais(campoIdEstado = "idEstado", campoIdPais = "idPais", classeDeDominio = Estado.class)
 public class NovoClienteRequester {
 
 	public NovoClienteRequester() {
@@ -23,7 +24,7 @@ public class NovoClienteRequester {
 
 	@NotNull
 	@Email
-	@ValorUnico(nomeDoCampo = "email", classeDeDominio = Cliente.class)
+	// @ValorUnico(nomeDoCampo = "email", classeDeDominio = Cliente.class)
 	private String email;
 
 	@NotNull
@@ -34,8 +35,8 @@ public class NovoClienteRequester {
 	@NotEmpty
 	private String sobrenome;
 
-	@CPF
-	@ValorUnico(nomeDoCampo = "email", classeDeDominio = Cliente.class)
+	@ValorUnico(nomeDoCampo = "documento", classeDeDominio = Cliente.class)
+	@ValidaCpfOuCnpj
 	private String documento;
 
 	@NotNull
@@ -60,16 +61,16 @@ public class NovoClienteRequester {
 
 	@NotNull
 	@NotEmpty
-	private String cep;	
-	
-	
-	public Cliente toModel(EntityManager em)  {
-	
-	Pais pais = em.find(Pais.class,	idPais);
-	Estado estado = em.find(Estado.class, idEstado);
-		 
-	return new Cliente( email, nome, sobrenome, documento, endereco, complemento, cidade, telefone, cep, pais, estado);
-			
+	private String cep;
+
+	public Cliente toModel(EntityManager em) {
+
+		Pais pais = em.find(Pais.class, idPais);
+		Estado estado = em.find(Estado.class, idEstado);
+
+		return new Cliente(email, nome, sobrenome, documento, endereco, complemento, cidade, telefone, cep, pais,
+				estado);
+
 	}
 
 	public String getEmail() {

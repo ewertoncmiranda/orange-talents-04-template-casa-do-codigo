@@ -1,10 +1,11 @@
 package miranda.ewerton.zup.casadocodigo.autor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import miranda.ewerton.zup.casadocodigo.livro.Livro;
+
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Autor {
@@ -15,6 +16,9 @@ public class Autor {
     private String nome ;
     private String descricao ;
     private LocalDateTime dataCriacao = LocalDateTime.now();
+
+    @OneToMany(mappedBy = "autor")
+    private List<Livro> livros = new ArrayList<>();
 
     public Autor(String nome, String email, String descricao) {
         this.nome = nome ;

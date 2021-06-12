@@ -4,17 +4,25 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import miranda.ewerton.zup.casadocodigo.compatilhado.validacao.valorunico.ValorUnico;
 
 public class NovoAutorRequester {
 
-    @NotBlank @Email @ValorUnico(classeDeDominio = Autor.class ,nomeDoCampo = "email") private String email ;
-    @NotBlank private String nome ;
-    @Size(max=400,min=0)private String descricao ;
+    @JsonProperty
+    @NotBlank @Email
+    @ValorUnico  (classeDeDominio = Autor.class ,nomeDoCampo = "email")
+    private String email ;
 
-    public NovoAutorRequester(@Email @NotBlank String email,
-                          @NotBlank String nome,
-                          @Size(max = 400 ,min = 0)  String descricao) {
+    @JsonProperty
+    @NotBlank private String nome ;
+
+    @JsonProperty @Size(max=400,min=0)
+    private String descricao ;
+
+    public NovoAutorRequester(@Email @NotBlank           String email,
+                              @NotBlank                  String nome,
+                              @Size(max = 400 ,min = 0)  String descricao) {
         this.email = email;
         this.nome = nome;
         this.descricao = descricao;
@@ -28,7 +36,7 @@ public class NovoAutorRequester {
                 ", descricao='" + descricao + '\'' +
                 '}';
     }
-    
+    /**Getters**/
     public String getEmail() { return email;   }
     public String getNome() { return nome;   }
     public String getDescricao() {return descricao;  }
